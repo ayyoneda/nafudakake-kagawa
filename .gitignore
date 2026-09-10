@@ -1,0 +1,18 @@
+# Credenciais e arquivos confidenciais
+credentials.json
+.env
+*.pem
+service_account.json
+
+# Arquivos temporários e cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+Thumbs.db
+
+# Saídas geradas opcionais de teste
+*.tmp
+test_*.png
+test_*.svg
+test_pattern.py
