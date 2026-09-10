@@ -27,7 +27,8 @@ SPREADSHEET_ID_DEFAULT = "1EvY8vbAkRkP6fO65baB5J5v71cpk74RU8KMEw57p0SA"
 SHEET_GID_DEFAULT = "1448812233"
 DRIVE_FOLDER_ID_DEFAULT = "1gbzJWLZWGbTqYXSX419Lsuzbe6TTASC_"
 CREDENTIALS_FILE_DEFAULT = "credentials.json"
-LOCAL_CSV_DEFAULT = "Cadastro - Atletas Kagawa (respostas) - Nafudakake.csv"
+LOCAL_CSV_FILENAME = "Cadastro - Atletas Kagawa (respostas) - Nafudakake.csv"
+LOCAL_CSV_DEFAULT = os.path.join("data", LOCAL_CSV_FILENAME) if os.path.isfile(os.path.join("data", LOCAL_CSV_FILENAME)) else LOCAL_CSV_FILENAME
 
 # Meses abreviados para ordenação de datas de exames
 MONTHS_MAP = {
