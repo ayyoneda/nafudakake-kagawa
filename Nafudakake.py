@@ -8,6 +8,7 @@ e suporte multi-modalidade (Kendo, Iaido e Jodo).
 
 import os
 import sys
+import json
 import base64
 import html
 from typing import List, Dict, Tuple, Optional
@@ -801,6 +802,14 @@ def build_nafudakake(
 
     with open(output_svg, "w", encoding="utf-8") as f:
         f.write(svg_content)
+
+    # Salva cache processado para o visualizador estático do GitHub Pages
+    cache_json_file = f"cache_{mod}.json"
+    try:
+        with open(cache_json_file, "w", encoding="utf-8") as f:
+            json.dump(processed_members, f, ensure_ascii=False, indent=2)
+    except Exception as e:
+        print(f"[Aviso] Falha ao salvar {cache_json_file}: {e}")
 
     print(f"SVG salvo: {output_svg} ({len(processed_members)} atletas de {mod.upper()}, {len(items)} plaquetas)")
 

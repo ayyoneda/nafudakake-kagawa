@@ -14,7 +14,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const searchStats = document.getElementById("search-stats");
   const danChipsContainer = document.getElementById("dan-chips-container");
   const toggleRomaji = document.getElementById("toggle-romaji");
-  const selectColumns = document.getElementById("select-columns");
+  const btnCloseSidebar = document.getElementById("btn-close-sidebar");
+  const btnOpenSidebar = document.getElementById("btn-open-sidebar");
+  const appLayout = document.querySelector(".app-layout");
   const btnSync = document.getElementById("btn-sync");
   const btnUploadDrive = document.getElementById("btn-upload-drive");
   const feedbackMsg = document.getElementById("feedback-msg");
@@ -47,8 +49,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // ==========================================
   async function loadNafudakakeSvg() {
     try {
-      const cols = selectColumns.value;
-      const showRomaji = toggleRomaji.checked;
+      const cols = 18;
+      const showRomaji = toggleRomaji ? toggleRomaji.checked : true;
       let res = await fetch(
         `/api/nafudakake.svg?modalidade=${currentModalidade}&placas_por_linha=${cols}&show_romaji=${showRomaji}&t=${Date.now()}`
       ).catch(() => null);
@@ -90,7 +92,39 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }
 
-      membersList = (data && data.members) ? data.members : [];
+      const rawList = (data && data.members) ? data.members : [];
+      membersList = rawList.map((m) => {
+        const ordem = m.ordem || m.Ordem || "";
+        const nomeCompleto = m.nome_completo || m["Nome completo"] || m.nome_abreviado || m["Nome abreviado"] || "";
+        const nomeAbreviado = m.nome_abreviado || m["Nome abreviado"] || nomeCompleto;
+        const jap = m.jap || m["Japonês"] || "";
+        const gradRaw = m.grad_raw || m.graduacao || m["Graduação"] || "";
+        const shogo = m.shogo || m.Shogo || "";
+        const dataGrad = m.data_grad || m["Data Graduação"] || m["Data Registro"] || "";
+
+        let danWeight = 0;
+        if (m.dan_weight !== undefined && m.dan_weight !== null && !isNaN(Number(m.dan_weight))) {
+          danWeight = Number(m.dan_weight);
+        } else if (m.base_weight !== undefined && m.base_weight !== null && !isNaN(Number(m.base_weight))) {
+          danWeight = Number(m.base_weight);
+        } else if (m.Peso !== undefined && m.Peso !== null && !isNaN(Number(m.Peso))) {
+          danWeight = Number(m.Peso);
+        }
+
+        return {
+          ordem: String(ordem),
+          nome_completo: nomeCompleto,
+          nome_abreviado: nomeAbreviado,
+          romaji: nomeAbreviado,
+          jap: jap,
+          grad_raw: gradRaw,
+          graduacao: gradRaw,
+          dan_weight: danWeight,
+          shogo: shogo,
+          data_grad: dataGrad
+        };
+      });
+
       totalKenshisEl.textContent = membersList.length;
       sourcePillText.textContent = (data && data.source) ? data.source : "Base Local";
 
@@ -259,6 +293,27 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  // Controle da Barra Lateral Retrátil
+  function setSidebarCollapsed(collapsed) {
+    if (appLayout) {
+      if (collapsed) {
+        appLayout.classList.add("sidebar-collapsed");
+      } else {
+        appLayout.classList.remove("sidebar-collapsed");
+      }
+      setTimeout(() => {
+        fitToScreen();
+      }, 360);
+    }
+  }
+
+  if (btnCloseSidebar) {
+    btnCloseSidebar.addEventListener("click", () => setSidebarCollapsed(true));
+  }
+  if (btnOpenSidebar) {
+    btnOpenSidebar.addEventListener("click", () => setSidebarCollapsed(false));
+  }
+
   // ==========================================
   // 3. INTERAÇÃO E INSPEÇÃO DAS PLAQUETAS
   // ==========================================
@@ -405,16 +460,16 @@ document.addEventListener("DOMContentLoaded", () => {
   // 4b. CHIPS DE DAN DINÂMICOS & TROCA DE MODALIDADE
   // ==========================================
   const DAN_LABELS = {
-    80: "八段",
-    70: "七段",
-    60: "六段",
-    50: "五段",
-    40: "四段",
-    30: "三段",
-    20: "二段",
-    10: "初段",
-    1: "一級",
-    0: "無段"
+    80: "8º Dan",
+    70: "7º Dan",
+    60: "6º Dan",
+    50: "5º Dan",
+    40: "4º Dan",
+    30: "3º Dan",
+    20: "2º Dan",
+    10: "1º Dan",
+    1: "1º Kyu",
+    0: "Sem Dan"
   };
 
   function renderDanChips() {
@@ -428,11 +483,17 @@ document.addEventListener("DOMContentLoaded", () => {
     allBtn.textContent = "Todos";
     danChipsContainer.appendChild(allBtn);
 
-    // Filtra graduações com ao menos um praticante na modalidade atual
-    const uniqueDans = Array.from(new Set(membersList.map((m) => m.dan_weight))).sort((a, b) => b - a);
+    // Filtra graduações com ao menos um praticante na modalidade atual (excluindo valores nulos ou NaN)
+    const uniqueDans = Array.from(
+      new Set(
+        membersList
+          .map((m) => m.dan_weight)
+          .filter((d) => d !== undefined && d !== null && !isNaN(d) && typeof d === "number")
+      )
+    ).sort((a, b) => b - a);
 
     uniqueDans.forEach((danVal) => {
-      const label = DAN_LABELS[danVal] || `${Math.floor(danVal / 10)}段`;
+      const label = DAN_LABELS[danVal] || (danVal >= 10 ? `${Math.floor(danVal / 10)}º Dan` : "Sem Dan");
       const btn = document.createElement("button");
       btn.className = "chip";
       btn.setAttribute("data-dan", danVal);

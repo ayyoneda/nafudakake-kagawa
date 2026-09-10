@@ -77,13 +77,31 @@
         <div class="tooltip-romaji" id="tt-romaji"></div>
         <div class="tooltip-details">
           <div class="detail-row"><span>Graduação:</span> <strong id="tt-grad"></strong></div>
-          <div class="detail-row"><span>Data do Grau:</span> <span id="tt-data"></span></div>
+          <div class="detail-row"><span>Data de Registro:</span> <span id="tt-data"></span></div>
         </div>
       </div>
+
+      <!-- Botão Flutuante para Reabrir Barra Lateral quando recolhida -->
+      <button class="floating-sidebar-trigger" id="btn-open-sidebar" title="Abrir Painel de Busca e Filtros">
+        <svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+        <span>Painel & Busca</span>
+        <svg viewBox="0 0 24 24" width="14" height="14"><path fill="currentColor" d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+      </button>
     </main>
 
-    <!-- Barra Lateral de Controle e Ações -->
-    <aside class="sidebar">
+    <!-- Barra Lateral de Controle e Ações (Retrátil) -->
+    <aside class="sidebar" id="sidebar">
+      <!-- Cabeçalho da Barra Lateral com Botão de Recolher -->
+      <div class="sidebar-header-bar">
+        <div class="sidebar-header-title">
+          <svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/></svg>
+          <span>Painel de Controle</span>
+        </div>
+        <button class="sidebar-collapse-btn" id="btn-close-sidebar" title="Recolher Barra Lateral (Mais Espaço)">
+          <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+        </button>
+      </div>
+
       <!-- 1. Busca e Destaque -->
       <section class="sidebar-section">
         <h3 class="section-title">
@@ -105,14 +123,14 @@
         </h3>
         <div class="dan-chips" id="dan-chips-container">
           <button class="chip active" data-dan="all">Todos</button>
-          <button class="chip" data-dan="70">七段</button>
-          <button class="chip" data-dan="50">五段</button>
-          <button class="chip" data-dan="40">四段</button>
-          <button class="chip" data-dan="30">三段</button>
-          <button class="chip" data-dan="20">二段</button>
-          <button class="chip" data-dan="10">初段</button>
-          <button class="chip" data-dan="1">一級</button>
-          <button class="chip" data-dan="0">無段</button>
+          <button class="chip" data-dan="70">7º Dan</button>
+          <button class="chip" data-dan="50">5º Dan</button>
+          <button class="chip" data-dan="40">4º Dan</button>
+          <button class="chip" data-dan="30">3º Dan</button>
+          <button class="chip" data-dan="20">2º Dan</button>
+          <button class="chip" data-dan="10">1º Dan</button>
+          <button class="chip" data-dan="1">1º Kyu</button>
+          <button class="chip" data-dan="0">Sem Dan</button>
         </div>
       </section>
 
@@ -125,14 +143,6 @@
         <div class="control-row">
           <label for="toggle-romaji">Nomes Ocidentais (Romaji)</label>
           <input type="checkbox" id="toggle-romaji" checked>
-        </div>
-        <div class="control-row">
-          <label for="select-columns">Plaquetas por Trilho</label>
-          <select id="select-columns">
-            <option value="16">16 plaquetas</option>
-            <option value="18" selected>18 plaquetas</option>
-            <option value="20">20 plaquetas</option>
-          </select>
         </div>
       </section>
 
