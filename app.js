@@ -574,13 +574,11 @@ document.addEventListener("DOMContentLoaded", () => {
   // ==========================================
   // 5. AJUSTES VISUAIS EM TEMPO REAL
   // ==========================================
-  toggleRomaji.addEventListener("change", () => {
-    loadNafudakakeSvg();
-  });
-
-  selectColumns.addEventListener("change", () => {
-    loadNafudakakeSvg();
-  });
+  if (toggleRomaji) {
+    toggleRomaji.addEventListener("change", () => {
+      loadNafudakakeSvg();
+    });
+  }
 
   // ==========================================
   // 6. AÇÕES: SINCRONIZAÇÃO E GOOGLE DRIVE
@@ -605,8 +603,8 @@ document.addEventListener("DOMContentLoaded", () => {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          placas_por_linha: parseInt(selectColumns.value),
-          show_romaji: toggleRomaji.checked
+          placas_por_linha: 18,
+          show_romaji: toggleRomaji ? toggleRomaji.checked : true
         })
       });
 
