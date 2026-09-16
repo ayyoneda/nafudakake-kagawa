@@ -626,10 +626,10 @@ def generate_nafudakake_svg(
         )
         svg.append('</g>')
 
-    # 4. Renderização das Plaquetas Individuais e Cabeçalhos
+    # 4. Renderização das Plaquetas Individuais e Cabeçalhos (Tradicional: da Direita para a Esquerda)
     for idx, item in enumerate(items):
         row = idx // placas_por_linha
-        col = idx % placas_por_linha
+        col = (placas_por_linha - 1) - (idx % placas_por_linha)
 
         x = margem_x + col * (largura_placa + espaco_x)
         y = margem_topo + row * (altura_placa + espaco_y)
