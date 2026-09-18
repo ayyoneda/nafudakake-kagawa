@@ -22,6 +22,17 @@ if sys.platform == "win32":
     except Exception:
         pass
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.abspath(os.path.join(BASE_DIR, ".."))
+ASSETS_DIR = os.path.join(PROJECT_ROOT, "assets")
+FONTS_DIR = os.path.join(ASSETS_DIR, "fonts")
+EXPORTS_DIR = os.path.join(PROJECT_ROOT, "exports")
+os.makedirs(EXPORTS_DIR, exist_ok=True)
+DEFAULT_FONT_PATH = os.path.join(FONTS_DIR, "epgyobld.ttf")
+
+if BASE_DIR not in sys.path:
+    sys.path.insert(0, BASE_DIR)
+
 from google_sync import get_members_data, DAN_RANK_ORDER
 
 DAN_METADATA = {
@@ -44,7 +55,20 @@ class GlyphVectorizer:
     cada caractere japonês em elementos vetoriais puros (<path d="...">).
     Garante renderização 100% universal e independente de fontes externas.
     """
-    def __init__(self, font_path: str = "epgyobld.ttf"):
+    def __init__(self, font_path: Optional[str] = None):
+        if font_path is None:
+            font_path = DEFAULT_FONT_PATH
+        if not os.path.isfile(font_path):
+            candidates = [
+                font_path,
+                os.path.join(PROJECT_ROOT, "epgyobld.ttf"),
+                os.path.join(FONTS_DIR, "epgyobld.ttf"),
+                "epgyobld.ttf"
+            ]
+            for c in candidates:
+                if c and os.path.isfile(c):
+                    font_path = c
+                    break
         if not os.path.isfile(font_path):
             raise FileNotFoundError(f"Arquivo de fonte tipográfica não encontrado: {font_path}")
         self.font = TTFont(font_path)
@@ -165,12 +189,25 @@ _VECTORIZER: Optional[GlyphVectorizer] = None
 def get_glyph_vectorizer() -> GlyphVectorizer:
     global _VECTORIZER
     if _VECTORIZER is None:
-        _VECTORIZER = GlyphVectorizer("epgyobld.ttf")
+        _VECTORIZER = GlyphVectorizer()
     return _VECTORIZER
 
 
-def load_logo_base64(logo_path: str = "AKK_colorido.png") -> str:
+def load_logo_base64(logo_path: Optional[str] = None) -> str:
     """Carrega o brasão oficial do dojo e converte para Base64."""
+    if logo_path is None:
+        logo_path = os.path.join(PROJECT_ROOT, "AKK_colorido.png")
+    if not os.path.isfile(logo_path):
+        candidates = [
+            logo_path,
+            os.path.join(PROJECT_ROOT, "AKK_colorido.png"),
+            os.path.join(ASSETS_DIR, "AKK_colorido.png"),
+            "AKK_colorido.png"
+        ]
+        for c in candidates:
+            if c and os.path.isfile(c):
+                logo_path = c
+                break
     if os.path.isfile(logo_path):
         with open(logo_path, "rb") as f:
             return base64.b64encode(f.read()).decode("utf-8")
@@ -785,9 +822,9 @@ def build_nafudakake(
     """Fluxo completo de geração dos artefatos gráficos para a modalidade especificada."""
     mod = modalidade.lower()
     if output_svg is None:
-        output_svg = f"Nafudakake_{mod.capitalize()}.svg"
+        output_svg = os.path.join(PROJECT_ROOT, f"Nafudakake_{mod.capitalize()}.svg")
     if output_png is None:
-        output_png = f"Nafudakake_{mod.capitalize()}.png"
+        output_png = os.path.join(EXPORTS_DIR, f"Nafudakake_{mod.capitalize()}.png")
 
     raw_members, source = get_members_data(modalidade=mod)
     processed_members = process_members(raw_data=raw_members)
@@ -803,8 +840,8 @@ def build_nafudakake(
     with open(output_svg, "w", encoding="utf-8") as f:
         f.write(svg_content)
 
-    # Salva cache processado para o visualizador estático do GitHub Pages
-    cache_json_file = f"cache_{mod}.json"
+    # Salva cache processado para o visualizador estático do GitHub Pages na raiz
+    cache_json_file = os.path.join(PROJECT_ROOT, f"cache_{mod}.json")
     try:
         with open(cache_json_file, "w", encoding="utf-8") as f:
             json.dump(processed_members, f, ensure_ascii=False, indent=2)
@@ -821,13 +858,18 @@ def build_nafudakake(
 
 if __name__ == "__main__":
     print("Gerando Nafudakake para Kendo...")
-    build_nafudakake(modalidade="kendo", output_svg="Nafudakake_Kendo.svg", output_png="Nafudakake_Kendo.png")
+    kendo_svg = os.path.join(PROJECT_ROOT, "Nafudakake_Kendo.svg")
+    kendo_png = os.path.join(EXPORTS_DIR, "Nafudakake_Kendo.png")
+    build_nafudakake(modalidade="kendo", output_svg=kendo_svg, output_png=kendo_png)
+
     # Manter cópias com o nome legado para compatibilidade com a pasta do Drive
     import shutil
-    shutil.copy("Nafudakake_Kendo.svg", "Nafudakake_Realista.svg")
-    if os.path.isfile("Nafudakake_Kendo.png"):
-        shutil.copy("Nafudakake_Kendo.png", "Nafudakake_Realista.png")
+    shutil.copy(kendo_svg, os.path.join(PROJECT_ROOT, "Nafudakake_Realista.svg"))
+    if os.path.isfile(kendo_png):
+        shutil.copy(kendo_png, os.path.join(EXPORTS_DIR, "Nafudakake_Realista.png"))
 
     print("\nGerando Nafudakake para Iaido...")
-    build_nafudakake(modalidade="iaido", output_svg="Nafudakake_Iaido.svg", output_png="Nafudakake_Iaido.png")
+    iaido_svg = os.path.join(PROJECT_ROOT, "Nafudakake_Iaido.svg")
+    iaido_png = os.path.join(EXPORTS_DIR, "Nafudakake_Iaido.png")
+    build_nafudakake(modalidade="iaido", output_svg=iaido_svg, output_png=iaido_png)
     print("\nTodos os artefatos gerados com sucesso!")

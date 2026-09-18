@@ -16,15 +16,22 @@ if sys.platform == "win32":
     except Exception:
         pass
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.abspath(os.path.join(BASE_DIR, ".."))
+EXPORTS_DIR = os.path.join(PROJECT_ROOT, "exports")
+
+if BASE_DIR not in sys.path:
+    sys.path.insert(0, BASE_DIR)
+
 import Nafudakake
 import google_sync
 
-app = Flask(__name__, static_folder=".", static_url_path="")
+app = Flask(__name__, static_folder=PROJECT_ROOT, static_url_path="")
 
 
 @app.route("/")
 def index():
-    return send_file("index.html")
+    return send_file(os.path.join(PROJECT_ROOT, "index.html"))
 
 
 @app.route("/api/status", methods=["GET"])
@@ -39,8 +46,8 @@ def api_status():
         "credentials_file": os.path.basename(creds_path) if creds_path else None,
         "spreadsheet_id": google_sync.SPREADSHEET_ID_DEFAULT,
         "drive_folder_id": google_sync.DRIVE_FOLDER_ID_DEFAULT,
-        "svg_exists": os.path.isfile("Nafudakake_Realista.svg"),
-        "png_exists": os.path.isfile("Nafudakake_Realista.png"),
+        "svg_exists": os.path.isfile(os.path.join(PROJECT_ROOT, "Nafudakake_Realista.svg")),
+        "png_exists": os.path.isfile(os.path.join(EXPORTS_DIR, "Nafudakake_Realista.png")),
     })
 
 
@@ -70,7 +77,7 @@ def api_svg():
         show_romaji = request.args.get("show_romaji", "true").lower() == "true"
         force_regen = request.args.get("refresh", "false").lower() == "true"
 
-        svg_path = f"Nafudakake_{modalidade.capitalize()}.svg"
+        svg_path = os.path.join(PROJECT_ROOT, f"Nafudakake_{modalidade.capitalize()}.svg")
 
         if force_regen or not os.path.isfile(svg_path):
             Nafudakake.build_nafudakake(
@@ -138,8 +145,8 @@ def api_export_png():
     try:
         modalidade = request.args.get("modalidade", "kendo").lower()
         scale = float(request.args.get("scale", 2.0))
-        png_path = f"Nafudakake_{modalidade.capitalize()}.png"
-        svg_path = f"Nafudakake_{modalidade.capitalize()}.svg"
+        png_path = os.path.join(EXPORTS_DIR, f"Nafudakake_{modalidade.capitalize()}.png")
+        svg_path = os.path.join(PROJECT_ROOT, f"Nafudakake_{modalidade.capitalize()}.svg")
 
         if not os.path.isfile(svg_path):
             Nafudakake.build_nafudakake(modalidade=modalidade, output_svg=svg_path, output_png=None)
@@ -160,15 +167,20 @@ def api_upload_drive():
     try:
         results = {}
         files_to_upload = [
-            ("Nafudakake_Kendo.svg", "Nafudakake_Kendo.png"),
-            ("Nafudakake_Iaido.svg", "Nafudakake_Iaido.png"),
-            ("Nafudakake_Realista.svg", "Nafudakake_Realista.png")
+            (os.path.join(PROJECT_ROOT, "Nafudakake_Kendo.svg"), os.path.join(EXPORTS_DIR, "Nafudakake_Kendo.png")),
+            (os.path.join(PROJECT_ROOT, "Nafudakake_Iaido.svg"), os.path.join(EXPORTS_DIR, "Nafudakake_Iaido.png")),
+            (os.path.join(PROJECT_ROOT, "Nafudakake_Realista.svg"), os.path.join(EXPORTS_DIR, "Nafudakake_Realista.png"))
         ]
 
-        if not os.path.isfile("Nafudakake_Kendo.svg"):
-            Nafudakake.build_nafudakake(modalidade="kendo", output_svg="Nafudakake_Kendo.svg", output_png="Nafudakake_Kendo.png")
-        if not os.path.isfile("Nafudakake_Iaido.svg"):
-            Nafudakake.build_nafudakake(modalidade="iaido", output_svg="Nafudakake_Iaido.svg", output_png="Nafudakake_Iaido.png")
+        kendo_svg = os.path.join(PROJECT_ROOT, "Nafudakake_Kendo.svg")
+        kendo_png = os.path.join(EXPORTS_DIR, "Nafudakake_Kendo.png")
+        if not os.path.isfile(kendo_svg):
+            Nafudakake.build_nafudakake(modalidade="kendo", output_svg=kendo_svg, output_png=kendo_png)
+
+        iaido_svg = os.path.join(PROJECT_ROOT, "Nafudakake_Iaido.svg")
+        iaido_png = os.path.join(EXPORTS_DIR, "Nafudakake_Iaido.png")
+        if not os.path.isfile(iaido_svg):
+            Nafudakake.build_nafudakake(modalidade="iaido", output_svg=iaido_svg, output_png=iaido_png)
 
         for svg_f, png_f in files_to_upload:
             if os.path.isfile(svg_f):

@@ -23,12 +23,19 @@ if sys.platform == "win32":
     except Exception:
         pass
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.abspath(os.path.join(BASE_DIR, ".."))
+
 SPREADSHEET_ID_DEFAULT = "1EvY8vbAkRkP6fO65baB5J5v71cpk74RU8KMEw57p0SA"
 SHEET_GID_DEFAULT = "1448812233"
 DRIVE_FOLDER_ID_DEFAULT = "1gbzJWLZWGbTqYXSX419Lsuzbe6TTASC_"
 CREDENTIALS_FILE_DEFAULT = "credentials.json"
 LOCAL_CSV_FILENAME = "Cadastro - Atletas Kagawa (respostas) - Nafudakake.csv"
-LOCAL_CSV_DEFAULT = os.path.join("data", LOCAL_CSV_FILENAME) if os.path.isfile(os.path.join("data", LOCAL_CSV_FILENAME)) else LOCAL_CSV_FILENAME
+LOCAL_CSV_DEFAULT = (
+    os.path.join(PROJECT_ROOT, "data", LOCAL_CSV_FILENAME)
+    if os.path.isfile(os.path.join(PROJECT_ROOT, "data", LOCAL_CSV_FILENAME))
+    else os.path.join("data", LOCAL_CSV_FILENAME)
+)
 
 # Meses abreviados para ordenação de datas de exames
 MONTHS_MAP = {
@@ -117,10 +124,15 @@ def parse_graduacao_info(grad_raw: str) -> Tuple[int, int, Optional[str]]:
 def get_credentials_path() -> Optional[str]:
     """Retorna o caminho do arquivo de credenciais se existir."""
     env_file = os.getenv("GOOGLE_CREDENTIALS_FILE", CREDENTIALS_FILE_DEFAULT)
-    if os.path.isfile(env_file):
-        return env_file
-    if os.path.isfile(CREDENTIALS_FILE_DEFAULT):
-        return CREDENTIALS_FILE_DEFAULT
+    candidates = [
+        env_file,
+        os.path.join(PROJECT_ROOT, CREDENTIALS_FILE_DEFAULT),
+        CREDENTIALS_FILE_DEFAULT,
+        os.path.join(BASE_DIR, CREDENTIALS_FILE_DEFAULT)
+    ]
+    for c in candidates:
+        if c and os.path.isfile(c):
+            return c
     return None
 
 
@@ -242,12 +254,17 @@ def fetch_members_from_local_csv(csv_path: str = LOCAL_CSV_DEFAULT) -> List[Dict
 def fetch_members_from_local_cache(modalidade: str = "kendo") -> List[Dict[str, str]]:
     """Lê o cache JSON local da modalidade se disponível."""
     cache_file = f"cache_{modalidade.lower()}.json"
-    if os.path.isfile(cache_file):
-        try:
-            with open(cache_file, "r", encoding="utf-8") as f:
-                return json.load(f)
-        except Exception:
-            pass
+    candidates = [
+        os.path.join(PROJECT_ROOT, cache_file),
+        cache_file
+    ]
+    for path in candidates:
+        if os.path.isfile(path):
+            try:
+                with open(path, "r", encoding="utf-8") as f:
+                    return json.load(f)
+            except Exception:
+                pass
     return []
 
 
