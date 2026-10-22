@@ -313,18 +313,6 @@
   },
   {
     "ordem": "27",
-    "nome_completo": "Bartolomeu Rodrigues de Araujo Junior",
-    "nome_abreviado": "Bartolomeu Junior",
-    "jap": "ジュニア・バルトロメウ",
-    "graduacao": "Ikkyu",
-    "dan_weight": 1,
-    "peso": 1,
-    "shogo": "",
-    "kanji_dan": "一級",
-    "data_grad": "ago./24"
-  },
-  {
-    "ordem": "28",
     "nome_completo": "Ricardo Dias da Costa",
     "nome_abreviado": "Ricardo Costa",
     "jap": "コスタ・リカルド",
@@ -336,7 +324,7 @@
     "data_grad": "ago./24"
   },
   {
-    "ordem": "29",
+    "ordem": "28",
     "nome_completo": "Marcel Douglas Ueno Oda",
     "nome_abreviado": "Marcel Oda",
     "jap": "小田マルセル",
@@ -348,7 +336,7 @@
     "data_grad": "fev./25"
   },
   {
-    "ordem": "30",
+    "ordem": "29",
     "nome_completo": "Laura Kiyomi Abe",
     "nome_abreviado": "Kiyomi Abe",
     "jap": "阿部清美",
@@ -360,7 +348,7 @@
     "data_grad": ""
   },
   {
-    "ordem": "31",
+    "ordem": "30",
     "nome_completo": "Estanislau Gonçalves",
     "nome_abreviado": "Estanislau Gonçalves",
     "jap": "ゴンサルヴェス・エスタニスラウ",
@@ -372,7 +360,7 @@
     "data_grad": ""
   },
   {
-    "ordem": "32",
+    "ordem": "31",
     "nome_completo": "Miriam Aleixo",
     "nome_abreviado": "Miriam Aleixo",
     "jap": "アレイショ・ミリアム",
@@ -384,7 +372,7 @@
     "data_grad": ""
   },
   {
-    "ordem": "33",
+    "ordem": "32",
     "nome_completo": "Diogo Gomes de Oliveira",
     "nome_abreviado": "Diogo Oliveira",
     "jap": "オリヴェイラ・ディオゴ",
@@ -396,7 +384,7 @@
     "data_grad": ""
   },
   {
-    "ordem": "34",
+    "ordem": "33",
     "nome_completo": "Daniel Hideo Kasa",
     "nome_abreviado": "Daniel Kasa",
     "jap": "カサ・ダニエル",
@@ -408,7 +396,7 @@
     "data_grad": ""
   },
   {
-    "ordem": "35",
+    "ordem": "34",
     "nome_completo": "Pedro Enrique de Sá Fukunaga Teles",
     "nome_abreviado": "Pedro Teles",
     "jap": "テレス・ペドロ",
@@ -420,7 +408,7 @@
     "data_grad": ""
   },
   {
-    "ordem": "36",
+    "ordem": "35",
     "nome_completo": "Talía Santana Santos",
     "nome_abreviado": "Talía Santana",
     "jap": "サンタナ タリア",

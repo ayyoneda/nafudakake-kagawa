@@ -157,6 +157,30 @@
   },
   {
     "ordem": "14",
+    "nome_completo": "Daniel Sanches",
+    "nome_abreviado": "Daniel Sanches",
+    "jap": "サンチェス・ダニエル",
+    "graduacao": "5o Dan",
+    "dan_weight": 50,
+    "peso": 50,
+    "shogo": "",
+    "kanji_dan": "五段",
+    "data_grad": "out./26"
+  },
+  {
+    "ordem": "15",
+    "nome_completo": "Takero Kan",
+    "nome_abreviado": "Takero Kan",
+    "jap": "菅武朗",
+    "graduacao": "5o Dan",
+    "dan_weight": 50,
+    "peso": 50,
+    "shogo": "",
+    "kanji_dan": "五段",
+    "data_grad": ""
+  },
+  {
+    "ordem": "16",
     "nome_completo": "Deborah Fukunaga Teles",
     "nome_abreviado": "Deborah Teles",
     "jap": "テレス・デボラ",
@@ -168,7 +192,7 @@
     "data_grad": "mar./17"
   },
   {
-    "ordem": "15",
+    "ordem": "17",
     "nome_completo": "Naomi Takayama",
     "nome_abreviado": "Naomi Takayama",
     "jap": "高山直美",
@@ -180,19 +204,7 @@
     "data_grad": "mai./22"
   },
   {
-    "ordem": "16",
-    "nome_completo": "Daniel Sanches",
-    "nome_abreviado": "Daniel Sanches",
-    "jap": "サンチェス・ダニエル",
-    "graduacao": "4o Dan",
-    "dan_weight": 40,
-    "peso": 40,
-    "shogo": "",
-    "kanji_dan": "四段",
-    "data_grad": "nov./22"
-  },
-  {
-    "ordem": "17",
+    "ordem": "18",
     "nome_completo": "Guilherme Paulo Garulo",
     "nome_abreviado": "Guilherme Garulo",
     "jap": "ガルロ・ギレルメ",
@@ -204,7 +216,7 @@
     "data_grad": "nov./22"
   },
   {
-    "ordem": "18",
+    "ordem": "19",
     "nome_completo": "Carlos Haruo Adachi",
     "nome_abreviado": "Carlos Adachi",
     "jap": "足立カルロス",
@@ -216,7 +228,7 @@
     "data_grad": "set./24"
   },
   {
-    "ordem": "19",
+    "ordem": "20",
     "nome_completo": "Jorge Akita Junior",
     "nome_abreviado": "Jorge Akita",
     "jap": "秋田ジョルジ",
@@ -228,7 +240,7 @@
     "data_grad": "mar./25"
   },
   {
-    "ordem": "20",
+    "ordem": "21",
     "nome_completo": "Fabian Rodrigo Huanca Millan",
     "nome_abreviado": "Fabian Millan",
     "jap": "ミラン・ファビアン",
@@ -240,7 +252,7 @@
     "data_grad": "mar./26"
   },
   {
-    "ordem": "21",
+    "ordem": "22",
     "nome_completo": "Carlos Henrique de Carvalho Rebelo",
     "nome_abreviado": "Carlos Rebelo",
     "jap": "レベロ・カルロス",
@@ -252,7 +264,7 @@
     "data_grad": "mai./09"
   },
   {
-    "ordem": "22",
+    "ordem": "23",
     "nome_completo": "Luiz Fernando Montroni",
     "nome_abreviado": "Fernando Montroni",
     "jap": "モントローニ フェルナンド",
@@ -264,7 +276,7 @@
     "data_grad": "mar./16"
   },
   {
-    "ordem": "23",
+    "ordem": "24",
     "nome_completo": "Leonardo Se Kwang Ahn",
     "nome_abreviado": "Se Ahn",
     "jap": "アン・セ",
@@ -276,7 +288,7 @@
     "data_grad": "mar./17"
   },
   {
-    "ordem": "24",
+    "ordem": "25",
     "nome_completo": "Reynaldo Kiyoshi Fukunaga",
     "nome_abreviado": "Reynaldo Fukunaga",
     "jap": "福永レイナルド",
@@ -288,7 +300,7 @@
     "data_grad": "set./19"
   },
   {
-    "ordem": "25",
+    "ordem": "26",
     "nome_completo": "Luiz Fabio Kenichi Yamashita",
     "nome_abreviado": "Luiz Yamashita",
     "jap": "山下ルイス",
@@ -300,7 +312,7 @@
     "data_grad": "dez./21"
   },
   {
-    "ordem": "26",
+    "ordem": "27",
     "nome_completo": "Diogo Gomes de Oliveira",
     "nome_abreviado": "Diogo Oliveira",
     "jap": "オリヴェイラ・ディオゴ",
@@ -312,7 +324,7 @@
     "data_grad": "mai./22"
   },
   {
-    "ordem": "27",
+    "ordem": "28",
     "nome_completo": "Pedro Enrique de Sá Fukunaga Teles",
     "nome_abreviado": "Pedro Teles",
     "jap": "テレス・ペドロ",
@@ -324,7 +336,7 @@
     "data_grad": "mai./22"
   },
   {
-    "ordem": "28",
+    "ordem": "29",
     "nome_completo": "Rubens Jundy Fugita",
     "nome_abreviado": "Rubens Fugita",
     "jap": "藤田ルーベンス",
@@ -336,7 +348,7 @@
     "data_grad": "nov./22"
   },
   {
-    "ordem": "29",
+    "ordem": "30",
     "nome_completo": "Cleyton Henrique Dias de Jesus",
     "nome_abreviado": "Cleyton Dias",
     "jap": "ディアス・クレイトン",
@@ -348,7 +360,7 @@
     "data_grad": "set./23"
   },
   {
-    "ordem": "30",
+    "ordem": "31",
     "nome_completo": "Conrado Cotomácio",
     "nome_abreviado": "Conrado Cotomácio",
     "jap": "コトマシオ・コンラード",
@@ -360,7 +372,7 @@
     "data_grad": "mar./25"
   },
   {
-    "ordem": "31",
+    "ordem": "32",
     "nome_completo": "Jose Arnaldo Degasperi da Cunha",
     "nome_abreviado": "Jose Degasperi",
     "jap": "デガスペリ ホセ",
@@ -372,7 +384,7 @@
     "data_grad": "set./25"
   },
   {
-    "ordem": "32",
+    "ordem": "33",
     "nome_completo": "Glauber Duarte Monteiro",
     "nome_abreviado": "Glauber Monteiro",
     "jap": "モンテイロ・グラウベル",
@@ -384,7 +396,7 @@
     "data_grad": "set./25"
   },
   {
-    "ordem": "33",
+    "ordem": "34",
     "nome_completo": "Gilbert Hisashi Ogawa",
     "nome_abreviado": "Hisashi Ogawa",
     "jap": "小川久志",
@@ -396,7 +408,7 @@
     "data_grad": "jul./92"
   },
   {
-    "ordem": "34",
+    "ordem": "35",
     "nome_completo": "Renato Fernandes",
     "nome_abreviado": "Renato Fernandes",
     "jap": "フェルナンデス レナート",
@@ -408,7 +420,7 @@
     "data_grad": "mai./23"
   },
   {
-    "ordem": "35",
+    "ordem": "36",
     "nome_completo": "Anneliese de Oliveira Lozada",
     "nome_abreviado": "Anneliese Lozada",
     "jap": "ロザダ・アンネリーゼ",
@@ -420,7 +432,7 @@
     "data_grad": "mai./23"
   },
   {
-    "ordem": "36",
+    "ordem": "37",
     "nome_completo": "Henrique Yuji Teixeira Yamauchi",
     "nome_abreviado": "Yuji Yamauchi",
     "jap": "山内雄二",
@@ -432,7 +444,7 @@
     "data_grad": "mai./23"
   },
   {
-    "ordem": "37",
+    "ordem": "38",
     "nome_completo": "Matheus Molinaro Dias Guimarães",
     "nome_abreviado": "Matheus Guimarães",
     "jap": "ギマランイス・マテウス",
@@ -444,7 +456,7 @@
     "data_grad": "set./23"
   },
   {
-    "ordem": "38",
+    "ordem": "39",
     "nome_completo": "Daniela Akita",
     "nome_abreviado": "Daniela Akita",
     "jap": "秋田ダニエラ",
@@ -456,7 +468,7 @@
     "data_grad": "mar./24"
   },
   {
-    "ordem": "39",
+    "ordem": "40",
     "nome_completo": "Mariana Lima Calabro",
     "nome_abreviado": "Mariana Calabro",
     "jap": "カラブロ・マリアナ",
@@ -468,7 +480,7 @@
     "data_grad": "set./24"
   },
   {
-    "ordem": "40",
+    "ordem": "41",
     "nome_completo": "Raissa Moreira Sonego",
     "nome_abreviado": "Raissa Sonego",
     "jap": "ソネゴ・ライッサ",
@@ -480,7 +492,7 @@
     "data_grad": "set./24"
   },
   {
-    "ordem": "41",
+    "ordem": "42",
     "nome_completo": "Ricardo Dias da Costa",
     "nome_abreviado": "Ricardo Costa",
     "jap": "コスタ・リカルド",
@@ -492,7 +504,7 @@
     "data_grad": "mar./25"
   },
   {
-    "ordem": "42",
+    "ordem": "43",
     "nome_completo": "Bruno Tinen",
     "nome_abreviado": "Bruno Tinen",
     "jap": "ティネン・ブルーノ",
@@ -504,7 +516,7 @@
     "data_grad": "mar./25"
   },
   {
-    "ordem": "43",
+    "ordem": "44",
     "nome_completo": "Vinicius Oliveira",
     "nome_abreviado": "Vinicius Oliveira",
     "jap": "オリヴェイラ・ヴィニシウス",
@@ -516,7 +528,7 @@
     "data_grad": "mar./25"
   },
   {
-    "ordem": "44",
+    "ordem": "45",
     "nome_completo": "Edmilson Silva dos Santos",
     "nome_abreviado": "Edmilson Santos",
     "jap": "サントス・エドミルソン",
@@ -528,7 +540,7 @@
     "data_grad": "set./25"
   },
   {
-    "ordem": "45",
+    "ordem": "46",
     "nome_completo": "Marcel Seiji Murakami",
     "nome_abreviado": "Marcel Murakami",
     "jap": "村上マルセル",
@@ -540,7 +552,7 @@
     "data_grad": "set./25"
   },
   {
-    "ordem": "46",
+    "ordem": "47",
     "nome_completo": "Felipe Fernandes da Silva",
     "nome_abreviado": "Felipe Silva",
     "jap": "シルバ・フェリペ",
@@ -552,7 +564,7 @@
     "data_grad": "mar./26"
   },
   {
-    "ordem": "47",
+    "ordem": "48",
     "nome_completo": "Gabriel S M Pombo",
     "nome_abreviado": "Gabriel Pombo",
     "jap": "ポンボ・ガブリエル",
@@ -564,7 +576,7 @@
     "data_grad": "set./26"
   },
   {
-    "ordem": "48",
+    "ordem": "49",
     "nome_completo": "Heitor José da Silva Lopes",
     "nome_abreviado": "Heitor Lopes",
     "jap": "ロペス・エイトル",
@@ -576,7 +588,7 @@
     "data_grad": "set./26"
   },
   {
-    "ordem": "49",
+    "ordem": "50",
     "nome_completo": "Gabriel Shimansky Trivelli",
     "nome_abreviado": "Gabriel Trivelli",
     "jap": "トリヴェリ・ガブリエル",
@@ -588,7 +600,7 @@
     "data_grad": "set./26"
   },
   {
-    "ordem": "50",
+    "ordem": "51",
     "nome_completo": "Pedro Lobo Montroni",
     "nome_abreviado": "Pedro Lobo",
     "jap": "ロボ・ペドロ",
@@ -600,7 +612,7 @@
     "data_grad": "set./26"
   },
   {
-    "ordem": "51",
+    "ordem": "52",
     "nome_completo": "Larisa Emi Okabe",
     "nome_abreviado": "Larisa Okabe",
     "jap": "岡部ラリサ",
@@ -612,7 +624,7 @@
     "data_grad": "////"
   },
   {
-    "ordem": "52",
+    "ordem": "53",
     "nome_completo": "Mauricio Yuji Ahagon",
     "nome_abreviado": "Mauricio Ahagon",
     "jap": "阿波根マウリシオ",
@@ -622,18 +634,6 @@
     "shogo": "",
     "kanji_dan": "初段",
     "data_grad": "mai./22"
-  },
-  {
-    "ordem": "53",
-    "nome_completo": "Bartolomeu Rodrigues de Araujo Junior",
-    "nome_abreviado": "Bartolomeu Junior",
-    "jap": "ジュニア・バルトロメウ",
-    "graduacao": "1o Dan",
-    "dan_weight": 10,
-    "peso": 10,
-    "shogo": "",
-    "kanji_dan": "初段",
-    "data_grad": "mar./23"
   },
   {
     "ordem": "54",
@@ -757,18 +757,6 @@
   },
   {
     "ordem": "64",
-    "nome_completo": "Victor Hideo Kobayashi",
-    "nome_abreviado": "Victor Kobayashi",
-    "jap": "小林ビクター",
-    "graduacao": "Ikkyu",
-    "dan_weight": 1,
-    "peso": 1,
-    "shogo": "",
-    "kanji_dan": "一級",
-    "data_grad": "mai./22"
-  },
-  {
-    "ordem": "65",
     "nome_completo": "Alessandro Basile",
     "nome_abreviado": "Alessandro Basile",
     "jap": "バジーレ・アレッサンドロ",
@@ -780,19 +768,7 @@
     "data_grad": "set./23"
   },
   {
-    "ordem": "66",
-    "nome_completo": "Marcos Vinicius Nunes de Oliveira",
-    "nome_abreviado": "Marcos Oliveira",
-    "jap": "オリヴェイラ・マルコス",
-    "graduacao": "Ikkyu",
-    "dan_weight": 1,
-    "peso": 1,
-    "shogo": "",
-    "kanji_dan": "一級",
-    "data_grad": "set./23"
-  },
-  {
-    "ordem": "67",
+    "ordem": "65",
     "nome_completo": "Jose Carlos Pereira da Silva Corte",
     "nome_abreviado": "Jose Corte",
     "jap": "コルテ・ホセ",
@@ -804,7 +780,7 @@
     "data_grad": "mar./24"
   },
   {
-    "ordem": "68",
+    "ordem": "66",
     "nome_completo": "Talía Santana Santos",
     "nome_abreviado": "Talía Santana",
     "jap": "サンタナ タリア",
@@ -816,7 +792,7 @@
     "data_grad": "set./25"
   },
   {
-    "ordem": "69",
+    "ordem": "67",
     "nome_completo": "Vinicio Oliveira Santos",
     "nome_abreviado": "Vinicio Santos",
     "jap": "サントス・ヴィニシオ",
@@ -828,7 +804,7 @@
     "data_grad": "set./25"
   },
   {
-    "ordem": "70",
+    "ordem": "68",
     "nome_completo": "Cleber Cáceres",
     "nome_abreviado": "Cleber Cáceres",
     "jap": "カセレス・クレーベル",
@@ -840,7 +816,7 @@
     "data_grad": "set./26"
   },
   {
-    "ordem": "71",
+    "ordem": "69",
     "nome_completo": "Marco Antonio Garcia",
     "nome_abreviado": "Marco Garcia",
     "jap": "ガルシア・マルコ",
@@ -852,7 +828,7 @@
     "data_grad": "set./26"
   },
   {
-    "ordem": "72",
+    "ordem": "70",
     "nome_completo": "Pedro Manuel Barría Valdebenito",
     "nome_abreviado": "Pedro Valdebenito",
     "jap": "バルデベニト・ペドロ",
@@ -864,7 +840,7 @@
     "data_grad": "set./26"
   },
   {
-    "ordem": "73",
+    "ordem": "71",
     "nome_completo": "Letícia Cury Pedroso Pereira",
     "nome_abreviado": "Letícia Pereira",
     "jap": "ペレイラ・レティシア",
@@ -876,31 +852,7 @@
     "data_grad": "set./26"
   },
   {
-    "ordem": "74",
-    "nome_completo": "Renato Bazzo Missono",
-    "nome_abreviado": "Renato Missono",
-    "jap": "味園レナト",
-    "graduacao": "Sem graduação",
-    "dan_weight": 0,
-    "peso": 0,
-    "shogo": "",
-    "kanji_dan": "無段",
-    "data_grad": ""
-  },
-  {
-    "ordem": "75",
-    "nome_completo": "Franco José Batista de Oliveira",
-    "nome_abreviado": "Franco Oliveira",
-    "jap": "オリヴェイラ・フランコ",
-    "graduacao": "Sem graduação",
-    "dan_weight": 0,
-    "peso": 0,
-    "shogo": "",
-    "kanji_dan": "無段",
-    "data_grad": ""
-  },
-  {
-    "ordem": "76",
+    "ordem": "72",
     "nome_completo": "Marcus Scavone",
     "nome_abreviado": "Marcus Scavone",
     "jap": "スカヴォーニ・マルクス",
@@ -912,7 +864,7 @@
     "data_grad": ""
   },
   {
-    "ordem": "77",
+    "ordem": "73",
     "nome_completo": "Solange Yukari Akiama",
     "nome_abreviado": "Solange Akiama",
     "jap": "秋山ソランジュ",
@@ -924,7 +876,7 @@
     "data_grad": ""
   },
   {
-    "ordem": "78",
+    "ordem": "74",
     "nome_completo": "Miriam Aleixo",
     "nome_abreviado": "Miriam Aleixo",
     "jap": "アレイショ・ミリアム",
@@ -936,7 +888,7 @@
     "data_grad": ""
   },
   {
-    "ordem": "79",
+    "ordem": "75",
     "nome_completo": "Marcus Vinicius Ferreira",
     "nome_abreviado": "Marcus Ferreira",
     "jap": "フェレイラ・マルクス",
@@ -948,7 +900,7 @@
     "data_grad": ""
   },
   {
-    "ordem": "80",
+    "ordem": "76",
     "nome_completo": "Lélia Yumi Chubatsu",
     "nome_abreviado": "Yumi Chubatsu",
     "jap": "中鉢由美",
@@ -960,7 +912,7 @@
     "data_grad": ""
   },
   {
-    "ordem": "81",
+    "ordem": "77",
     "nome_completo": "Mauro Rego Viana",
     "nome_abreviado": "Mauro Viana",
     "jap": "ヴィアナ・マウロ",
@@ -972,7 +924,7 @@
     "data_grad": ""
   },
   {
-    "ordem": "82",
+    "ordem": "78",
     "nome_completo": "Silvana Érica Isibasi",
     "nome_abreviado": "Silvana Isibasi",
     "jap": "石橋シルバナ",
@@ -984,7 +936,7 @@
     "data_grad": ""
   },
   {
-    "ordem": "83",
+    "ordem": "79",
     "nome_completo": "Alexandre Augusto Maia",
     "nome_abreviado": "Alexandre Maia",
     "jap": "マイア・アレクサンドレ",
@@ -996,7 +948,7 @@
     "data_grad": ""
   },
   {
-    "ordem": "84",
+    "ordem": "80",
     "nome_completo": "Andreia Neves Asami",
     "nome_abreviado": "Andreia Asami",
     "jap": "浅見アンドレイア",
@@ -1008,19 +960,7 @@
     "data_grad": ""
   },
   {
-    "ordem": "85",
-    "nome_completo": "Takero Kan",
-    "nome_abreviado": "Takero Kan",
-    "jap": "菅武朗",
-    "graduacao": "Sem graduação",
-    "dan_weight": 0,
-    "peso": 0,
-    "shogo": "",
-    "kanji_dan": "無段",
-    "data_grad": ""
-  },
-  {
-    "ordem": "86",
+    "ordem": "81",
     "nome_completo": "Guilherme Rocha Vieira",
     "nome_abreviado": "Guilherme Vieira",
     "jap": "ヴィエイラ・ギレルメ",
@@ -1032,7 +972,7 @@
     "data_grad": ""
   },
   {
-    "ordem": "87",
+    "ordem": "82",
     "nome_completo": "Fabio Silveira",
     "nome_abreviado": "Fabio Silveira",
     "jap": "シルヴェイラ・ファビオ",
@@ -1044,7 +984,19 @@
     "data_grad": ""
   },
   {
-    "ordem": "88",
+    "ordem": "83",
+    "nome_completo": "Renato Bazzo Missono",
+    "nome_abreviado": "Renato Missono",
+    "jap": "味園レナト",
+    "graduacao": "Sem graduação",
+    "dan_weight": 0,
+    "peso": 0,
+    "shogo": "",
+    "kanji_dan": "無段",
+    "data_grad": ""
+  },
+  {
+    "ordem": "84",
     "nome_completo": "Isis Alves Pereira",
     "nome_abreviado": "Isis Pereira",
     "jap": "ペレイラ・イシス",
@@ -1056,7 +1008,7 @@
     "data_grad": ""
   },
   {
-    "ordem": "89",
+    "ordem": "85",
     "nome_completo": "Mauricio Visani",
     "nome_abreviado": "Mauricio Visani",
     "jap": "ヴィザーニ・マウリシオ",
@@ -1068,7 +1020,7 @@
     "data_grad": ""
   },
   {
-    "ordem": "90",
+    "ordem": "86",
     "nome_completo": "Otávio Kurokawa Mori",
     "nome_abreviado": "Otávio Mori",
     "jap": "森オタヴィオ",
@@ -1080,7 +1032,7 @@
     "data_grad": ""
   },
   {
-    "ordem": "91",
+    "ordem": "87",
     "nome_completo": "Laudisvan Marques da Silva Anjos",
     "nome_abreviado": "Laudisvan Anjos",
     "jap": "アンジョス・ラウディスヴァン",
@@ -1092,7 +1044,7 @@
     "data_grad": ""
   },
   {
-    "ordem": "92",
+    "ordem": "88",
     "nome_completo": "Cristofer Alcides Espindola",
     "nome_abreviado": "Cristofer Espindola",
     "jap": "エスピンドラ・クリストファー",
@@ -1104,7 +1056,7 @@
     "data_grad": ""
   },
   {
-    "ordem": "93",
+    "ordem": "89",
     "nome_completo": "Luiz Carlos Ferreira Rocha",
     "nome_abreviado": "Luiz Rocha",
     "jap": "ロシャ・ルイス",
@@ -1116,7 +1068,7 @@
     "data_grad": ""
   },
   {
-    "ordem": "94",
+    "ordem": "90",
     "nome_completo": "Rafael Gonçalves Teixeira Daniel",
     "nome_abreviado": "Rafael Daniel",
     "jap": "ダニエル・ラファエル",
@@ -1128,7 +1080,7 @@
     "data_grad": ""
   },
   {
-    "ordem": "95",
+    "ordem": "91",
     "nome_completo": "Cleiton Souza Lima",
     "nome_abreviado": "Cleiton Lima",
     "jap": "リマ・クレイトン",
@@ -1140,7 +1092,7 @@
     "data_grad": ""
   },
   {
-    "ordem": "96",
+    "ordem": "92",
     "nome_completo": "Ji Eun Kim",
     "nome_abreviado": "Ji Kim",
     "jap": "キム・ジ",
@@ -1152,7 +1104,7 @@
     "data_grad": ""
   },
   {
-    "ordem": "97",
+    "ordem": "93",
     "nome_completo": "Luiz Claudio Medina Junior",
     "nome_abreviado": "Luiz Medina",
     "jap": "メディナ・ルイス",
@@ -1164,7 +1116,7 @@
     "data_grad": ""
   },
   {
-    "ordem": "98",
+    "ordem": "94",
     "nome_completo": "Kassia Xiao Zou",
     "nome_abreviado": "Kassia Zou",
     "jap": "ゾウ・カシア",
@@ -1176,7 +1128,7 @@
     "data_grad": ""
   },
   {
-    "ordem": "99",
+    "ordem": "95",
     "nome_completo": "Wagner William Calisto",
     "nome_abreviado": "Wagner Calisto",
     "jap": "カリスト・ヴァグナー",
@@ -1188,7 +1140,7 @@
     "data_grad": ""
   },
   {
-    "ordem": "100",
+    "ordem": "96",
     "nome_completo": "Fabiana Cecília Cassiano",
     "nome_abreviado": "Fabiana Cassiano",
     "jap": "カシアーノ・ファビアナ",
@@ -1200,7 +1152,7 @@
     "data_grad": ""
   },
   {
-    "ordem": "101",
+    "ordem": "97",
     "nome_completo": "Henrique de Albuquerque Castro",
     "nome_abreviado": "Henrique Castro",
     "jap": "カストロ・エンリケ",
@@ -1212,7 +1164,7 @@
     "data_grad": ""
   },
   {
-    "ordem": "102",
+    "ordem": "98",
     "nome_completo": "Rodrigo Carneiro de Araujo",
     "nome_abreviado": "Rodrigo Araujo",
     "jap": "アラウジョ・ロドリゴ",
@@ -1224,7 +1176,7 @@
     "data_grad": ""
   },
   {
-    "ordem": "103",
+    "ordem": "99",
     "nome_completo": "Artur Valladão Silva",
     "nome_abreviado": "Artur Valladão",
     "jap": "ヴァラダオン・アルトゥール",
@@ -1236,7 +1188,7 @@
     "data_grad": ""
   },
   {
-    "ordem": "104",
+    "ordem": "100",
     "nome_completo": "Priscila Kakuda",
     "nome_abreviado": "Priscila Kakuda",
     "jap": "角田プリシラ",
@@ -1248,7 +1200,7 @@
     "data_grad": ""
   },
   {
-    "ordem": "105",
+    "ordem": "101",
     "nome_completo": "Victor Senciel Veloso de Lima",
     "nome_abreviado": "Victor Lima",
     "jap": "リマ・ヴィクトル",
@@ -1260,7 +1212,7 @@
     "data_grad": ""
   },
   {
-    "ordem": "106",
+    "ordem": "102",
     "nome_completo": "Willian Nascimento Jacintho",
     "nome_abreviado": "Willian Jacintho",
     "jap": "ジャシント・ウィリアン",
@@ -1272,7 +1224,7 @@
     "data_grad": ""
   },
   {
-    "ordem": "107",
+    "ordem": "103",
     "nome_completo": "Vinícius Melo Sousa",
     "nome_abreviado": "Vinícius Sousa",
     "jap": "ソウザ・ヴィニシウス",
@@ -1284,19 +1236,7 @@
     "data_grad": ""
   },
   {
-    "ordem": "108",
-    "nome_completo": "Vitor Yan Taveiros Gomes",
-    "nome_abreviado": "Vitor Gomes",
-    "jap": "ゴメス・ヴィトール",
-    "graduacao": "Sem graduação",
-    "dan_weight": 0,
-    "peso": 0,
-    "shogo": "",
-    "kanji_dan": "無段",
-    "data_grad": ""
-  },
-  {
-    "ordem": "109",
+    "ordem": "104",
     "nome_completo": "Keila Amorim",
     "nome_abreviado": "Keila Amorim",
     "jap": "アモリム・ケイラ",
@@ -1308,7 +1248,7 @@
     "data_grad": ""
   },
   {
-    "ordem": "110",
+    "ordem": "105",
     "nome_completo": "Erick Simões Rosa",
     "nome_abreviado": "Erick Rosa",
     "jap": "ローザ・エリック",
@@ -1320,7 +1260,7 @@
     "data_grad": ""
   },
   {
-    "ordem": "111",
+    "ordem": "106",
     "nome_completo": "Lucas Bonilha de Moraes",
     "nome_abreviado": "Lucas Moraes",
     "jap": "モラエス・ルーカス",
@@ -1332,7 +1272,7 @@
     "data_grad": ""
   },
   {
-    "ordem": "112",
+    "ordem": "107",
     "nome_completo": "Lucas Sussumu Hazuma",
     "nome_abreviado": "Lucas Hazuma",
     "jap": "東 ルーカス",
@@ -1344,7 +1284,7 @@
     "data_grad": ""
   },
   {
-    "ordem": "113",
+    "ordem": "108",
     "nome_completo": "Mariana Augusto Moreno",
     "nome_abreviado": "Mariana Moreno",
     "jap": "モレノ・マリアナ",
@@ -1356,7 +1296,7 @@
     "data_grad": ""
   },
   {
-    "ordem": "114",
+    "ordem": "109",
     "nome_completo": "Davi Bernardes Alves",
     "nome_abreviado": "Davi Alves",
     "jap": "アルヴェス・ダヴィ",
@@ -1368,7 +1308,7 @@
     "data_grad": ""
   },
   {
-    "ordem": "115",
+    "ordem": "110",
     "nome_completo": "Natália Yumi Suguimoto Kaneko",
     "nome_abreviado": "Natália Kaneko",
     "jap": "金子ナタリア",
@@ -1380,7 +1320,7 @@
     "data_grad": ""
   },
   {
-    "ordem": "116",
+    "ordem": "111",
     "nome_completo": "Enzo Ferreira Brito",
     "nome_abreviado": "Enzo Brito",
     "jap": "ブリト・エンゾ",
@@ -1392,7 +1332,7 @@
     "data_grad": ""
   },
   {
-    "ordem": "117",
+    "ordem": "112",
     "nome_completo": "Pedro Graziosi",
     "nome_abreviado": "Pedro Graziosi",
     "jap": "グラツィオーシ・ペドロ",
@@ -1404,7 +1344,7 @@
     "data_grad": ""
   },
   {
-    "ordem": "118",
+    "ordem": "113",
     "nome_completo": "Manuella Christina Kyoka Kawakami",
     "nome_abreviado": "Manuella Kawakami",
     "jap": "川上マヌエラ",
@@ -1416,7 +1356,7 @@
     "data_grad": ""
   },
   {
-    "ordem": "119",
+    "ordem": "114",
     "nome_completo": "Angélica Magnagnagno",
     "nome_abreviado": "Angélica Magnagnagno",
     "jap": "マニャニャーニョ・アンジェリカ",
@@ -1428,7 +1368,7 @@
     "data_grad": ""
   },
   {
-    "ordem": "120",
+    "ordem": "115",
     "nome_completo": "Davi Villaça Casella",
     "nome_abreviado": "Davi Casella",
     "jap": "カセラ・ダヴィ",
@@ -1440,7 +1380,7 @@
     "data_grad": ""
   },
   {
-    "ordem": "121",
+    "ordem": "116",
     "nome_completo": "Eduardo Tetsuo Yamashita Rocha",
     "nome_abreviado": "Eduardo Rocha",
     "jap": "ロシャ・エドゥアルド",
@@ -1452,7 +1392,7 @@
     "data_grad": ""
   },
   {
-    "ordem": "122",
+    "ordem": "117",
     "nome_completo": "Breno Kevien Matos Diniz",
     "nome_abreviado": "Breno Diniz",
     "jap": "ディニズ・ブレノ",
@@ -1464,7 +1404,7 @@
     "data_grad": ""
   },
   {
-    "ordem": "123",
+    "ordem": "118",
     "nome_completo": "Samuel Taiyo Todoroki",
     "nome_abreviado": "Samuel Todoroki",
     "jap": "轟サムエル",
@@ -1476,7 +1416,7 @@
     "data_grad": ""
   },
   {
-    "ordem": "124",
+    "ordem": "119",
     "nome_completo": "Henry Tsuyoshi Muramatsu Oya",
     "nome_abreviado": "Henry Oya",
     "jap": "大矢ヘンリー",
@@ -1488,7 +1428,7 @@
     "data_grad": ""
   },
   {
-    "ordem": "125",
+    "ordem": "120",
     "nome_completo": "Lorenzo Neves Garcia",
     "nome_abreviado": "Lorenzo Garcia",
     "jap": "ガルシア・ロレンゾ",
@@ -1500,7 +1440,7 @@
     "data_grad": ""
   },
   {
-    "ordem": "126",
+    "ordem": "121",
     "nome_completo": "Bernardo Hayato Mori",
     "nome_abreviado": "Bernardo Mori",
     "jap": "森ベルナルド",
@@ -1512,7 +1452,7 @@
     "data_grad": ""
   },
   {
-    "ordem": "127",
+    "ordem": "122",
     "nome_completo": "Francisco Della Rovere Matozo Almeida",
     "nome_abreviado": "Francisco Almeida",
     "jap": "アルメイダ・フランシスコ",
@@ -1524,7 +1464,7 @@
     "data_grad": ""
   },
   {
-    "ordem": "128",
+    "ordem": "123",
     "nome_completo": "Lia Marui Capelli Cosentino",
     "nome_abreviado": "Lia Marui",
     "jap": "丸井リア",
@@ -1536,7 +1476,7 @@
     "data_grad": ""
   },
   {
-    "ordem": "129",
+    "ordem": "124",
     "nome_completo": "Joshua Zou Kimura",
     "nome_abreviado": "Joshua Kimura",
     "jap": "木村ジョシュア",
@@ -1548,7 +1488,7 @@
     "data_grad": ""
   },
   {
-    "ordem": "130",
+    "ordem": "125",
     "nome_completo": "Isaac Seiji Fujii Marani",
     "nome_abreviado": "Isaac Marani",
     "jap": "マラーニ・アイザック",
@@ -1560,7 +1500,7 @@
     "data_grad": ""
   },
   {
-    "ordem": "131",
+    "ordem": "126",
     "nome_completo": "Cora Marui Capelli Cosentino",
     "nome_abreviado": "Cora Marui",
     "jap": "丸井コーラ",
@@ -1572,7 +1512,7 @@
     "data_grad": ""
   },
   {
-    "ordem": "132",
+    "ordem": "127",
     "nome_completo": "Bryan Hiroki Muramatsu Oya",
     "nome_abreviado": "Bryan Oya",
     "jap": "大矢ブライアン",
@@ -1584,10 +1524,22 @@
     "data_grad": ""
   },
   {
-    "ordem": "133",
+    "ordem": "128",
     "nome_completo": "Larissa Hikari Mori",
     "nome_abreviado": "Larissa Mori",
     "jap": "森ラリッサ",
+    "graduacao": "Sem graduação",
+    "dan_weight": 0,
+    "peso": 0,
+    "shogo": "",
+    "kanji_dan": "無段",
+    "data_grad": ""
+  },
+  {
+    "ordem": "129",
+    "nome_completo": "Olivia Mei Tachibana Yoneda",
+    "nome_abreviado": "Mei Yoneda",
+    "jap": "米田芽",
     "graduacao": "Sem graduação",
     "dan_weight": 0,
     "peso": 0,
