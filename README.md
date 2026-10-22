@@ -121,34 +121,65 @@ A hierarquia marcial do Nafudakake é computada automaticamente pelo `src/google
 
 Não é necessário atualizar o Nafudakake diariamente. O procedimento deve ser realizado apenas quando houver **exames de graduação**, **novas filiações** ou **alterações de dados** na planilha mestre:
 
-#### Método Rápido (1 Clique no Windows):
-1. Dê um duplo-clique no arquivo **`atualizar_nafudakake.bat`**.
-2. O script irá:
-   - Conectar diretamente na aba mestre `Kenshis` do Google Sheets.
-   - Extrair e ordenar os praticantes ativos de Kendo e Iaido.
-   - Vetorizar a nova diagramação e salvar os arquivos `Nafudakake_Kendo.svg`, `Nafudakake_Iaido.svg`, `cache_kendo.json` e as imagens em `exports/`.
+---
 
-#### Método por Linha de Comando:
+#### 🥇 Opção 1: Direto da Planilha Google Sheets (Recomendado)
+Você pode atualizar o painel sem sair da planilha e sem ligar seu computador de desenvolvimento:
+
+1. Abra a planilha do Google Sheets.
+2. No menu superior, clique em: **`🥋 Nafudakake` > `🔄 Atualizar Painel no Datastudio`**.
+3. O robô do **GitHub Actions** será acionado na nuvem, compilará as novas plaquetas e atualizará o GitHub Pages.
+4. Em cerca de **1 a 2 minutos**, o Datastudio refletirá as novas graduações automaticamente!
+
+*(Para a configuração inicial única desta integração, veja [Configuração do Botão na Planilha](#configuração-do-botão-na-planilha-google-sheets) abaixo).*
+
+---
+
+#### 🥈 Opção 2: 1-Clique no Windows (`atualizar_nafudakake.bat`)
+Caso esteja no seu computador local:
+1. Dê um duplo-clique no arquivo **`atualizar_nafudakake.bat`** (ou no seu atalho na Área de Trabalho).
+2. O script conecta na planilha, extrai os dados, gera os SVGs/PNGs e executa automaticamente o `git commit` e `git push origin main`.
+3. Pronto! Em 1 minuto o Datastudio já está atualizado.
+
+---
+
+#### 🥉 Opção 3: Linha de Comando Manual
 ```bash
 python src/Nafudakake.py
+git add .
+git commit -m "Atualizacao do Nafudakake"
+git push origin main
 ```
 
 ---
 
-### Como Publicar e Refletir no Looker Studio / Datastudio
+### Como Refletir no Looker Studio / Datastudio
+- **Nenhuma alteração de link ou configuração é necessária no Looker Studio**: o relatório já lê o link do GitHub Pages (`https://ayyoneda.github.io/nafudakake-kagawa/?embed=true`).
+- O GitHub Pages publica as alterações em **1 a 2 minutos**.
+- Basta abrir o Looker Studio e recarregar a página (ou pressionar **`Ctrl + F5`**).
 
-Após rodar a atualização local, envie as alterações para o GitHub:
+---
 
-```bash
-git add .
-git commit -m "Atualização do Nafudakake: novos praticantes e graduações"
-git push origin main
-```
+### Configuração do Botão na Planilha Google Sheets (Passo Único)
 
-**Como refletir no Looker Studio?**
-- **Nenhuma alteração é necessária no Looker Studio**: o relatório já está configurado para ler o link do GitHub Pages (`https://ayyoneda.github.io/nafudakake-kagawa/?embed=true`).
-- O GitHub Pages publica automaticamente em **1 a 2 minutos**.
-- Basta abrir o relatório no Looker Studio e pressionar **`Ctrl + F5`** (ou clicar nos três pontinhos do menu → **"Atualizar dados"**).
+Para ativar o menu **`🥋 Nafudakake`** na sua planilha:
+
+1. **Configurar o Secret no GitHub (1 minuto):**
+   - No GitHub do projeto, vá em: **Settings > Secrets and variables > Actions**.
+   - Clique em **New repository secret**.
+   - Nome: `GCP_CREDENTIALS`
+   - Valor: Abra o seu arquivo local `credentials.json`, copie todo o texto e cole no campo. Clique em **Add secret**.
+
+2. **Instalar o Script na Planilha (1 minuto):**
+   - Na sua planilha Google Sheets, vá no menu: **Extensões > Apps Script**.
+   - Abra o arquivo [`google_apps_script/codigo_planilha.js`](google_apps_script/codigo_planilha.js), copie todo o conteúdo e cole no editor do Apps Script.
+   - Clique em **Salvar (ícone de disquete)**.
+   - Recarregue a planilha (`F5`). O menu **`🥋 Nafudakake`** aparecerá no topo!
+
+3. **Gerar o Token do GitHub (30 segundos):**
+   - Acesse [github.com/settings/tokens](https://github.com/settings/tokens) (ou Personal Access Tokens clássico/fine-grained).
+   - Crie um token com permissão de repositório (`repo`).
+   - Na planilha, ao clicar pela primeira vez em **`🥋 Nafudakake > 🔄 Atualizar Painel no Datastudio`**, cole o token quando solicitado (ele ficará salvo com segurança na planilha).
 
 ---
 

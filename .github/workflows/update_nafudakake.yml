@@ -1,0 +1,66 @@
+name: Atualizar Nafudakake Digital
+
+on:
+  workflow_dispatch: # Permite disparo manual pelo site/celular no GitHub
+  repository_dispatch: # Permite disparo automático a partir do botão no Google Sheets
+    types: [update_nafudakake]
+  schedule:
+    - cron: '0 10 * * 1' # Atualização automática preventiva toda segunda-feira às 07:00 (BRT)
+
+permissions:
+  contents: write
+
+jobs:
+  update-nafudakake:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout do Repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Instalar Dependências
+        run: |
+          pip install fonttools pillow PySide6 google-api-python-client google-auth
+
+      - name: Injetar Credenciais Temporárias do Google Cloud
+        env:
+          GCP_CREDENTIALS: ${{ secrets.GCP_CREDENTIALS }}
+        run: |
+          if ("$env:GCP_CREDENTIALS" -ne "") {
+            $env:GCP_CREDENTIALS | Out-File -FilePath credentials.json -Encoding utf8
+            Write-Host "Credenciais do Google Cloud configuradas com sucesso."
+          } else {
+            Write-Host "AVISO: Secret GCP_CREDENTIALS não configurado. Tentará modo offline se houver cache."
+          }
+
+      - name: Executar Gerador do Nafudakake
+        run: |
+          python src/Nafudakake.py
+
+      - name: Remover Credenciais por Segurança
+        if: always()
+        run: |
+          if (Test-Path credentials.json) {
+            Remove-Item -Force credentials.json
+            Write-Host "Credenciais temporárias removidas com segurança."
+          }
+
+      - name: Publicar Alterações no GitHub Pages
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add Nafudakake_Kendo.svg Nafudakake_Iaido.svg Nafudakake_Realista.svg cache_kendo.json cache_iaido.json exports/
+          $status = git status --porcelain
+          if ($status) {
+            git commit -m "Atualizacao automatica do Nafudakake [skip ci]"
+            git push origin main
+            Write-Host "Alterações publicadas com sucesso na branch main!"
+          } else {
+            Write-Host "Nenhuma alteração detectada na planilha. Os arquivos já estavam atualizados."
+          }
