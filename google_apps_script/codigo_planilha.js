@@ -71,7 +71,7 @@ function atualizarNafudakake() {
     method: 'post',
     contentType: 'application/json',
     headers: {
-      'Authorization': 'token ' + token,
+      'Authorization': 'Bearer ' + token,
       'Accept': 'application/vnd.github.v3+json',
       'User-Agent': 'Google-Apps-Script-Nafudakake'
     },
