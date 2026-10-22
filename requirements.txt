@@ -1,0 +1,5 @@
+fonttools>=4.40.0
+pillow>=10.0.0
+PySide6>=6.5.0
+google-api-python-client>=2.90.0
+google-auth>=2.20.0

@@ -20,7 +20,7 @@ var GITHUB_REPO_NAME = "nafudakake-kagawa";
 function onOpen() {
   var ui = SpreadsheetApp.getUi();
   ui.createMenu('🥋 Nafudakake')
-    .addItem('🔄 Atualizar Painel no Datastudio', 'atualizarNafudakake')
+    .addItem('🔄 Atualizar Painel no Datastudio', 'dispararAtualizacaoDatastudio')
     .addSeparator()
     .addItem('⚙️ Configurar / Trocar Token do GitHub', 'configurarTokenGitHub')
     .addToUi();
@@ -29,7 +29,7 @@ function onOpen() {
 /**
  * Dispara a atualização do Nafudakake via GitHub Actions.
  */
-function atualizarNafudakake() {
+function dispararAtualizacaoDatastudio() {
   var ui = SpreadsheetApp.getUi();
   var props = PropertiesService.getScriptProperties();
   var token = props.getProperty('GITHUB_TOKEN');

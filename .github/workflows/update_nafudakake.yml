@@ -26,7 +26,8 @@ jobs:
 
       - name: Instalar Dependências
         run: |
-          pip install fonttools pillow PySide6 google-api-python-client google-auth
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
 
       - name: Injetar Credenciais Temporárias do Google Cloud
         env:
