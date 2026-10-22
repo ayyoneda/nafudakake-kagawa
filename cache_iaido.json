@@ -1,21 +1,21 @@
 [
   {
     "ordem": "1",
-    "nome_completo": "Adrian Yu Yoneda",
-    "nome_abreviado": "Adrian Yoneda",
-    "jap": "米田裕",
-    "graduacao": "6o Dan",
-    "dan_weight": 60,
-    "peso": 60,
-    "shogo": "",
-    "kanji_dan": "六段",
-    "data_grad": "out./26"
-  },
-  {
-    "ordem": "2",
     "nome_completo": "Aurea Toshie Kojima",
     "nome_abreviado": "Aurea Kojima",
     "jap": "児島オーレア",
+    "graduacao": "5o Dan",
+    "dan_weight": 50,
+    "peso": 50,
+    "shogo": "",
+    "kanji_dan": "五段",
+    "data_grad": "set./22"
+  },
+  {
+    "ordem": "2",
+    "nome_completo": "Adrian Yu Yoneda",
+    "nome_abreviado": "Adrian Yoneda",
+    "jap": "米田裕",
     "graduacao": "5o Dan",
     "dan_weight": 50,
     "peso": 50,
