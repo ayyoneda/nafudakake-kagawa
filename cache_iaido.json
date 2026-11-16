@@ -361,18 +361,6 @@
   },
   {
     "ordem": "31",
-    "nome_completo": "Miriam Aleixo",
-    "nome_abreviado": "Miriam Aleixo",
-    "jap": "アレイショ・ミリアム",
-    "graduacao": "Sem graduação",
-    "dan_weight": 0,
-    "peso": 0,
-    "shogo": "",
-    "kanji_dan": "無段",
-    "data_grad": ""
-  },
-  {
-    "ordem": "32",
     "nome_completo": "Diogo Gomes de Oliveira",
     "nome_abreviado": "Diogo Oliveira",
     "jap": "オリヴェイラ・ディオゴ",
@@ -384,7 +372,7 @@
     "data_grad": ""
   },
   {
-    "ordem": "33",
+    "ordem": "32",
     "nome_completo": "Daniel Hideo Kasa",
     "nome_abreviado": "Daniel Kasa",
     "jap": "カサ・ダニエル",
@@ -396,7 +384,7 @@
     "data_grad": ""
   },
   {
-    "ordem": "34",
+    "ordem": "33",
     "nome_completo": "Pedro Enrique de Sá Fukunaga Teles",
     "nome_abreviado": "Pedro Teles",
     "jap": "テレス・ペドロ",
@@ -408,7 +396,7 @@
     "data_grad": ""
   },
   {
-    "ordem": "35",
+    "ordem": "34",
     "nome_completo": "Talía Santana Santos",
     "nome_abreviado": "Talía Santana",
     "jap": "サンタナ タリア",
